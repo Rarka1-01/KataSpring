@@ -1,10 +1,12 @@
 package dao;
 
 import model.Car;
+import org.springframework.stereotype.Component;
 
 import java.util.LinkedList;
 import java.util.List;
 
+@Component
 public class CarDaoImp implements CarDao {
 
     @Override
