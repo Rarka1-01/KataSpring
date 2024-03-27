@@ -3,16 +3,20 @@ package service;
 import dao.CarDao;
 import dao.CarDaoImp;
 import model.Car;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.LinkedList;
 import java.util.List;
 
+@Component
 public class CarServiceImp implements CarService {
 
     private final CarDao carDao;
 
-    public CarServiceImp() {
-        this.carDao = new CarDaoImp();
+    @Autowired
+    public CarServiceImp(CarDao carDao) {
+        this.carDao = carDao;
     }
 
     @Override
