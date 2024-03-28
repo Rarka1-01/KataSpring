@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import java.util.LinkedList;
 import java.util.List;
 
-@Component
+@Component(value = "carServiceImp")
 public class CarServiceImp implements CarService {
 
     private final CarDao carDao;
